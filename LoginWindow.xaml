@@ -1,0 +1,39 @@
+﻿<Window x:Class="InventoryManagementSystem.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManagementSystem"
+        mc:Ignorable="d"
+        Title="Inventory Management System" Height="450" Width="800" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <DockPanel DockPanel.Dock="Top" >
+            <Label Content="Inventory Management System" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="22"/>
+        </DockPanel>
+
+
+        <Border Background="#FF97E6DD" Grid.Row="1" Width="400" Margin="0,40,0,40" Padding="15,15,15,15">
+            <DockPanel LastChildFill="False" Height="285">
+                <Label Content="Log In" FontSize="18" DockPanel.Dock="Top" HorizontalAlignment="Center"/>
+                
+                <Label Content="ID:" FontSize="20" DockPanel.Dock="Top"/>
+                <TextBox x:Name="IDTextBox" DockPanel.Dock="Top" FontSize="20" MaxLines="1" />
+                
+                <Label Content="Password:" FontSize="20" DockPanel.Dock="Top"/>
+                <PasswordBox x:Name="PasswordTextBox" DockPanel.Dock="Top" FontSize="20" PasswordChar="*"></PasswordBox>
+    
+                <TextBlock x:Name="LoginErrorTextBlock" DockPanel.Dock="Top" Height="0" FontSize="18" Foreground="Red" />
+                
+                <Button x:Name="LoginButton" DockPanel.Dock="Bottom" FontSize="20" Content="Login" BorderThickness="2,2,2,2" />
+            </DockPanel>
+        </Border>
+
+
+    </Grid>
+</Window>
