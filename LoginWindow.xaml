@@ -26,11 +26,11 @@
                 <TextBox x:Name="IDTextBox" DockPanel.Dock="Top" FontSize="20" MaxLines="1" />
                 
                 <Label Content="Password:" FontSize="20" DockPanel.Dock="Top"/>
-                <PasswordBox x:Name="PasswordTextBox" DockPanel.Dock="Top" FontSize="20" PasswordChar="*"></PasswordBox>
+                <PasswordBox x:Name="PasswordTextBox" DockPanel.Dock="Top" FontSize="20" PasswordChar="*" KeyDown="PasswordTextBox_KeyDown"></PasswordBox>
     
                 <TextBlock x:Name="LoginErrorTextBlock" DockPanel.Dock="Top" Height="0" FontSize="18" Foreground="Red" />
                 
-                <Button x:Name="LoginButton" DockPanel.Dock="Bottom" FontSize="20" Content="Login" BorderThickness="2,2,2,2" />
+                <Button x:Name="LoginButton" DockPanel.Dock="Bottom" FontSize="20" Content="Login" BorderThickness="2,2,2,2" Click="LoginButton_Click" />
             </DockPanel>
         </Border>
 

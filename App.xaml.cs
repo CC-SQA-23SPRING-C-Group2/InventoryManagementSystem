@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using InventoryManagementSystem.Models;
+using Realms;
 using System.Windows;
 
 namespace InventoryManagementSystem
@@ -13,5 +9,24 @@ namespace InventoryManagementSystem
     /// </summary>
     public partial class App : Application
     {
+        public Realm context;
+
+        public App()
+        {
+            //Create an In-memory Database
+            var config = new InMemoryConfiguration("some-identifier");
+            context = Realm.GetInstance(config);
+            //Add default admin to the database
+            User admin = new()
+            {
+                ID = "admin",
+                Password = "Admin"
+            };
+            context.Write(() =>
+            {
+                context.Add(admin);
+            });
+            
+        }
     }
 }

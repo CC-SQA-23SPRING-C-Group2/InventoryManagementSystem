@@ -11,4 +11,8 @@
     <Folder Include="Models\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Realm" Version="11.4.0" />
+  </ItemGroup>
+
 </Project>
