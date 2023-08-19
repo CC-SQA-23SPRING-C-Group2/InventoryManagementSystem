@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace InventoryManagementSystem
 {
     /// <summary>
-    /// Interaction logic for ControlWindow.xaml
+    /// Interaction logic for ProductEditorWindow.xaml
     /// </summary>
-    public partial class ControlWindow : Window
+    public partial class ProductEditorWindow : Window
     {
-        public ControlWindow()
+        public ProductEditorWindow()
         {
             InitializeComponent();
-        }
-
-        private void ViewProductButton_Click(object sender, RoutedEventArgs e)
-        {
-            Window window = new ProductListWindow();
-            window.ShowDialog();
         }
     }
 }

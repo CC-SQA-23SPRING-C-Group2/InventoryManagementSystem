@@ -12,12 +12,12 @@ namespace InventoryManagementSystem
     /// </summary>
     public partial class LoginWindow : Window
     {
-        Realm context;
+        private Realm context;
 
         public LoginWindow()
         {
             InitializeComponent();
-            context = ((App)Application.Current).context;
+            context = ((App)Application.Current).Context;
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)

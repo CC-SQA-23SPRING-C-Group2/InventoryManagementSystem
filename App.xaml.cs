@@ -9,24 +9,38 @@ namespace InventoryManagementSystem
     /// </summary>
     public partial class App : Application
     {
-        public Realm context;
+        public Realm Context;
 
         public App()
         {
             //Create an In-memory Database
             var config = new InMemoryConfiguration("some-identifier");
-            context = Realm.GetInstance(config);
+            Context = Realm.GetInstance(config);
             //Add default admin to the database
             User admin = new()
             {
                 ID = "admin",
                 Password = "Admin"
             };
-            context.Write(() =>
+            Context.Write(() =>
             {
-                context.Add(admin);
+                Context.Add(admin);
             });
-            
+
+            //Add sample data of product
+            Product product = new()
+            {
+                Name = "Test",
+                Price = 10.96,
+                QuantityInHand = 100,
+                QuantitySold = 100,
+                ReorderThreshold = 10,
+            };
+
+            Context.Write(() =>
+            {
+                Context.Add(product);
+            });
         }
     }
 }

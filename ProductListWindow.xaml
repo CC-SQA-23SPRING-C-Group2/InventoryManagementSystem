@@ -1,0 +1,26 @@
+﻿<Window x:Class="InventoryManagementSystem.ProductListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManagementSystem"
+        mc:Ignorable="d"
+        Title="ProductListWindow" Height="450" Width="800">
+    <Grid>
+
+        <DataGrid x:Name="DataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name"  Binding="{Binding Name}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Unit Price" Binding="{Binding Price}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Quantity In Hand" Binding="{Binding QuantityInHand}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Quantity Sold" Binding="{Binding QuantitySold}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Inventory Value" Binding="{Binding InventoryValue}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Sales Value" Binding="{Binding SalesValue}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Remain Quantity" Binding="{Binding Remain}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Reorder Threshold" Binding="{Binding ReorderThreshold}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Reorder Status" Binding="{Binding ReorderStatus}" IsReadOnly="True" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
