@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InventoryManagementSystem"
         mc:Ignorable="d"
-        Title="ProductEditorWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="ProductEditorWindow" Height="250" Width="800">
+    <Grid Margin="0,0,0,0">
+        <DockPanel LastChildFill="False" Margin="10,10,10,10">
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                <Label Content="Product Name:"/>
+                <TextBox x:Name="NameTextBox" TextWrapping="Wrap" Text="" Width="200" />
+                <TextBlock x:Name="NameErrorTextB" TextWrapping="Wrap" Text="" Width="400" Foreground="Red"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="Unit Price:"/>
+                <TextBox x:Name="PriceTextBox" TextWrapping="Wrap" Text="" Width="200"/>
+                <TextBlock x:Name="PriceErrorTextB" TextWrapping="Wrap" Text="" Width="400" Foreground="Red"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="Initial Stock:"/>
+                <TextBox x:Name="StockTextBox" TextWrapping="Wrap" Text="" Width="200"/>
+                <TextBlock x:Name="StockErrorTextB" TextWrapping="Wrap" Text="" Width="400" Foreground="Red"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="Reorder Threshold:"/>
+                <TextBox x:Name="ThresholdTextBox" TextWrapping="Wrap" Text="" Width="200"/>
+                <TextBlock x:Name="ThresholdErrorTextB" TextWrapping="Wrap" Text="" Width="400" Foreground="Red"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Margin="0,5,0,0" HorizontalAlignment="Center">
+                <TextBlock x:Name="SaveErrorTextB" Foreground="Red" Width="525" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                <Button x:Name="SaveButton" Content="Save Product" Click="SaveButton_Click" Width="91"/>
+            </StackPanel>
+            
+        </DockPanel>
+
     </Grid>
 </Window>

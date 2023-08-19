@@ -29,5 +29,11 @@ namespace InventoryManagementSystem
             Window window = new ProductListWindow();
             window.ShowDialog();
         }
+
+        private void AddProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new ProductEditorWindow();
+            window.ShowDialog();
+        }
     }
 }

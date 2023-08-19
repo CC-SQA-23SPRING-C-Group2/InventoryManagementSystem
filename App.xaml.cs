@@ -20,7 +20,7 @@ namespace InventoryManagementSystem
             User admin = new()
             {
                 ID = "admin",
-                Password = "Admin"
+                Password = "admin"
             };
             Context.Write(() =>
             {

@@ -8,7 +8,7 @@
         Title="Inventory Management System Control Panel" Height="450" Width="800">
     <Grid >
         <Button x:Name="ViewProductButton" Content="View Product" HorizontalAlignment="Left" Margin="145,119,0,0" VerticalAlignment="Top" Click="ViewProductButton_Click"/>
-        <Button x:Name="AddProductButton" Content="Add Product" HorizontalAlignment="Left" Margin="320,119,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.067,0.145"/>
+        <Button x:Name="AddProductButton" Content="Add Product" HorizontalAlignment="Left" Margin="320,119,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.067,0.145" Click="AddProductButton_Click"/>
     </Grid>
 
 </Window>
